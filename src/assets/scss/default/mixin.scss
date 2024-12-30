@@ -1,0 +1,7 @@
+ @mixin hideText($count_line) {
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
+ 	display: -webkit-box;
+ 	-webkit-line-clamp: #{$count_line};
+ 	-webkit-box-orient: vertical;
+ }
