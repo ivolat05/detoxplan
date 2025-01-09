@@ -51,8 +51,11 @@ select {
 
 .container {
 	width: 100%;
-	max-width: 100%;
-
+	max-width: 1550px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 time {
@@ -100,5 +103,17 @@ time {
 			background: #0faeff;
 			border-radius: 10px;
 		}
+	}
+}
+
+.just-validate-error-label {
+	font-family: 'MullerNarrow';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 115%;
+
+	@media(max-width: 767px) {
+		font-size: 10px;
 	}
 }

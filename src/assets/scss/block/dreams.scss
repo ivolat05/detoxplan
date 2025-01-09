@@ -1,0 +1,167 @@
+.dreams {
+	position: relative;
+	padding-top: 132px;
+	z-index: 1;
+
+	@media($mobile) {
+		padding-top: 67px;
+	}
+}
+
+.dreams-title {
+	text-align: center;
+	position: relative;
+	max-width: 590px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media($mobile) {
+		max-width: 380px;
+	}
+}
+
+.dreams-list {
+	margin-top: 67px;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 40px;
+	padding-right: 40px;
+
+	@media(max-width:1550px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	@media(max-width:1200px) {
+
+		margin-left: auto;
+		margin-right: auto;
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-content: space-evenly;
+		gap: 60px 15px;
+	}
+
+	@media($mobile) {
+		margin-top: 25px;
+		gap: 35px 10px;
+	}
+}
+
+.dreams-list-inner {
+	width: 247px;
+	height: 247px;
+	border-radius: 50%;
+	position: relative;
+	isolation: isolate;
+	background: #FCF7E9;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 68px 10px;
+
+	&::after {
+		content: "";
+		width: 290px;
+		height: 290px;
+		border-radius: 50%;
+		border: 1px solid #FCF7E9;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+
+		@media($mobile) {
+			width: 137px;
+			height: 137px;
+		}
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, 15%);
+
+		@media($mobile) {
+			width: 70px;
+			transform: translate(-50%, 10%);
+		}
+	}
+
+	&:nth-child(1) {
+		transform: translateY(-88%);
+
+		@media(max-width:1200px) {
+			transform: translateY(0);
+		}
+	}
+
+	&:nth-child(4) {
+		transform: translateY(-97%);
+
+		@media(max-width:1200px) {
+			transform: translateY(0);
+		}
+	}
+
+	@media($mobile) {
+		width: 116px;
+		height: 116px;
+		padding: 15px;
+	}
+}
+
+.dreams__list-text {
+
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 135%;
+	text-transform: uppercase;
+	text-align: center;
+	color: #000000;
+
+	@media($mobile) {
+		font-size: 14px;
+	}
+}
+
+.dream__back-img {
+	position: absolute;
+	z-index: -1;
+}
+
+.dream__back-img-1 {
+	left: -17%;
+	top: 93%;
+
+	@media($mobile) {
+		width: 28px;
+		left: -3%;
+		top: 73%;
+	}
+}
+
+.dream__back-img-2 {
+	left: 106%;
+	top: -60%;
+
+	@media($mobile) {
+		left: 91%;
+		top: -1%;
+		width: 32px;
+	}
+}
+
+.dream__back-img-3 {
+	left: 88%;
+	top: 15%;
+
+	@media($mobile) {
+		width: 69px;
+		left: 82%;
+		top: 56%;
+	}
+}

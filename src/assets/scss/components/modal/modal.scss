@@ -4,7 +4,7 @@
 	top: 0;
 	width: 100vw;
 	height: 100vh;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(35, 31, 27, .75);
 	z-index: 5;
 	overflow: auto;
 	display: flex;
@@ -32,4 +32,77 @@
 	transform-style: preserve-3d;
 	transition: .4s;
 	margin: auto;
+	max-width: 322px;
+	width: 100%;
+	padding: 37px;
+	background: #ffff;
+
+}
+
+.modal__container-list {
+	max-width: 480px;
+}
+
+.modal-btn {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 25px;
+	height: 25px;
+
+	background: linear-gradient(180deg, #F8B90D 0%, #E36E00 100%);
+	box-shadow: 0px 4px 25px rgba(204, 71, 32, 0.3);
+
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	svg,
+	img {
+		width: 11px;
+		height: 11px;
+	}
+}
+
+
+
+
+
+
+.modal-title {
+
+	font-style: normal;
+	font-weight: 800;
+	font-size: 25px;
+	line-height: 43px;
+	color: #161335;
+}
+
+.modal-list {
+	padding-top: 15px;
+}
+
+.modal-inner+.modal-inner {
+	padding-top: 10px;
+}
+
+.modal-inner,
+.modal-inner a {
+
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 22px;
+	color: #161335;
+	text-decoration: underline;
+	transition: .4s;
+
+	@media(hover:hover) {
+		&:hover {
+			text-decoration: underline;
+
+		}
+	}
+
 }

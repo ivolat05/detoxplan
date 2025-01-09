@@ -2,10 +2,11 @@
 @import "../scss/default/mixin.scss";
 
 //  vendor
+@import "../scss/vendor/lenis.scss";
 @import "../scss/vendor/reset.scss";
 @import "../scss/vendor/swiper-bundle.min.scss";
 @import "../scss/vendor/fonts.scss";
-
+@import "../scss/block/preload.scss";
 // default
 @import "../scss/default/default.scss";
 @import "../scss/default/variables.scss";
@@ -15,7 +16,16 @@
 @import "../scss/default/components.scss";
 @import "../scss/default/header.scss";
 @import "../scss/default/footer.scss";
+@import "../scss/components/label/label.scss";
+@import "../scss/components/modal/modal.scss";
 
-// path
-@import "../scss/path/publick.scss";
-@import "../scss/path/cabinet.scss";
+/*index*/
+@import "../scss/block/main.scss";
+@import "../scss/block/promo.scss";
+@import "../scss/block/term.scss";
+@import "../scss/block/plan.scss";
+@import "../scss/block/received.scss";
+@import "../scss/block/dreams.scss";
+@import "../scss/block/reviews.scss";
+@import "../scss/block/questions.scss";
+@import "../scss/block/form.scss";

@@ -6,11 +6,68 @@
 )
 
 <body>
-	@@include("../html/header/header.html" )
-	<main>
+	<div class="preload">
 
-	</main>
-	@@include("../html/footer/footer.html")
+		<img class="preload-img" src="assets/img/preload.png" alt="">
+	</div>
+	<div class="page">
+		@@include("../html/header/header.html" )
+		<main>
+			@@include("../html/index/main.html" )
+			@@include("../html/index/promo.html" )
+			@@include("../html/index/term.html" )
+			@@include("../html/index/plan.html" )
+			@@include("../html/index/received.html" )
+			@@include("../html/index/dreams.html" )
+			@@include("../html/index/reviews.html" )
+			@@include("../html/index/questions.html" )
+			@@include("../html/index/form.html" )
+		</main>
+		@@include("../html/footer/footer.html")
+
+		<div id="modal-list" class="modal-background ">
+			<div class="modal__container modal__container-list">
+				<button class="modal-btn btn__modal--close">
+					<svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M0.341855 7C0.274245 7.00001 0.208151 6.97997 0.151932 6.94242C0.0957136 6.90486 0.0518956 6.85148 0.026021 6.78901C0.000146412 6.72655 -0.00662229 6.65782 0.00657105 6.59151C0.0197644 6.5252 0.0523271 6.46429 0.10014 6.41649L6.41643 0.100123C6.48054 0.0360152 6.56748 0 6.65815 0C6.74881 0 6.83575 0.0360152 6.89986 0.100123C6.96397 0.16423 6.99998 0.251178 6.99998 0.34184C6.99998 0.432501 6.96397 0.51945 6.89986 0.583557L0.583569 6.89992C0.551856 6.9317 0.514177 6.9569 0.472696 6.97408C0.431215 6.99125 0.38675 7.00006 0.341855 7Z"
+							fill="white" />
+						<path
+							d="M6.65815 7C6.61325 7.00006 6.56878 6.99125 6.5273 6.97408C6.48582 6.9569 6.44814 6.9317 6.41643 6.89992L0.10014 0.583557C0.0360336 0.51945 1.88281e-05 0.432501 1.88281e-05 0.34184C1.88281e-05 0.251178 0.0360336 0.16423 0.10014 0.100123C0.164247 0.0360152 0.251194 0 0.341855 0C0.432515 0 0.519462 0.0360152 0.583569 0.100123L6.89986 6.41649C6.94767 6.46429 6.98024 6.5252 6.99343 6.59151C7.00662 6.65782 6.99985 6.72655 6.97398 6.78901C6.9481 6.85148 6.90429 6.90486 6.84807 6.94242C6.79185 6.97997 6.72575 7.00001 6.65815 7Z"
+							fill="white" />
+					</svg>
+
+				</button>
+
+				<h3 class="modal-title">
+					заголовк
+				</h3>
+
+				<ul class="modal-list">
+					<li class="modal-inner">
+						<a href="#" target="_blank">
+							Документы
+						</a>
+					</li>
+					<li class="modal-inner">
+						<a href="#" target="_blank">
+							Публичная оферта
+						</a>
+					</li>
+					<li class="modal-inner">
+						<a href="#" target="_blank">
+							Согласние на обработку персональных данных
+						</a>
+					</li>
+					<li class="modal-inner">
+						<a href="#" target="_blank">
+							Положение об безопасности персональных данных
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 	<script src="assets/js/app.min.js"></script>
 </body>
 
