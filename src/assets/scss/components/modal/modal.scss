@@ -36,11 +36,36 @@
 	width: 100%;
 	padding: 37px;
 	background: #ffff;
-
+	border-radius: 20px;
 }
 
 .modal__container-list {
 	max-width: 480px;
+}
+
+.modal-exp {
+	max-width: 407px;
+	padding: 44px 30px;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translate(-50%, -100%);
+		background: url("../../assets/img/triangle.svg")no-repeat center bottom/contain;
+		width: 17px;
+		height: 11px;
+	}
+}
+
+.modal-exp-text {
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 135%;
+	text-align: center;
+	color: #000000;
 }
 
 .modal-btn {

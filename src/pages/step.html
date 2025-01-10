@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include("../html/head/head.html",{
-"title":'Главная страница'
+"title":'Тестирования'
 }
 )
 
@@ -13,20 +13,11 @@
 	<div class="page">
 		@@include("../html/header/header.html" )
 		<main>
-			@@include("../html/index/main.html" )
-			@@include("../html/index/promo.html" )
-			@@include("../html/index/term.html" )
-			@@include("../html/index/plan.html" )
-			@@include("../html/index/received.html" )
-			@@include("../html/index/dreams.html" )
-			@@include("../html/index/reviews.html" )
-			@@include("../html/index/questions.html" )
-			@@include("../html/index/form.html" )
+
 		</main>
 		@@include("../html/footer/footer.html")
-
-		<div id="modal-list" class="modal-background ">
-			<div class="modal__container modal__container-list">
+		<div id="modal-exp" class="modal-background  ">
+			<div class="modal__container  modal-exp">
 				<button class="modal-btn btn__modal--close">
 					<svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -38,35 +29,15 @@
 					</svg>
 
 				</button>
+				<p class="modal-exp-text">
+					Для достижения цели необходимо учитывать наличие вредных привычек. Вы можете выбрать несколько из
+					предложенных вариантов.
+				</p>
 
-				<h3 class="modal-title">
-					заголовк
-				</h3>
 
-				<ul class="modal-list">
-					<li class="modal-inner">
-						<a href="#" target="_blank">
-							Документы
-						</a>
-					</li>
-					<li class="modal-inner">
-						<a href="#" target="_blank">
-							Публичная оферта
-						</a>
-					</li>
-					<li class="modal-inner">
-						<a href="#" target="_blank">
-							Согласние на обработку персональных данных
-						</a>
-					</li>
-					<li class="modal-inner">
-						<a href="#" target="_blank">
-							Положение об безопасности персональных данных
-						</a>
-					</li>
-				</ul>
 			</div>
 		</div>
+
 	</div>
 	<script src="assets/js/app.min.js"></script>
 </body>
