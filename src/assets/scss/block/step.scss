@@ -851,3 +851,33 @@ input:checked~.step__quest-span {
 	}
 
 }
+
+.-step-btn-next {
+	display: none;
+}
+
+.-step-btn-next.--active {
+	display: flex;
+}
+
+.step__plan-inner {
+	display: none;
+
+	&:nth-child(1) {
+		display: flex;
+	}
+}
+
+.step__plan-inner.active {
+	.spinner {
+		display: none;
+	}
+
+	.check {
+		display: block;
+	}
+}
+
+.step__plan-inner.active+.step__plan-inner {
+	display: flex;
+}
