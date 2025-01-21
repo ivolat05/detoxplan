@@ -1,12 +1,12 @@
 .step {
 	position: relative;
-	padding-top: 105px;
+	padding-top: 90px;
 	padding-bottom: 58px;
 	background: linear-gradient(180deg, #FFFFFF 0%, #F8F6F1 100%);
 	isolation: isolate;
 
 	@media($mobile) {
-		padding-top: 110px;
+		padding-top: 75px;
 		padding-bottom: 40px;
 	}
 
@@ -30,6 +30,7 @@
 	text-align: center;
 	text-transform: uppercase;
 	color: #000000;
+	padding-top: 40px;
 
 	@media($mobile) {
 		font-size: 24px;
@@ -77,8 +78,7 @@
 .step__circle-progress {
 	stroke: #57D211;
 	stroke-dasharray: 440;
-	stroke-dashoffset: calc(440 - (440 * var(--progress)) / 100);
-	transition: stroke-dashoffset 1s ease-out;
+	stroke-dashoffset: calc(440);
 }
 
 .step__circle-text {
@@ -582,7 +582,9 @@ input:checked~.step__quest-span {
 .step__stage-list {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
 	gap: 36px;
 	margin-top: 20px;
 
@@ -710,7 +712,7 @@ input:checked~.step__quest-span {
 }
 
 .step__parameters-title {
-	font-family: 'Muller Narrow';
+	font-family: 'MullerNarrow';
 	font-style: normal;
 	font-weight: 300;
 	font-size: 22px;
@@ -880,4 +882,52 @@ input:checked~.step__quest-span {
 
 .step__plan-inner.active+.step__plan-inner {
 	display: flex;
+}
+
+.step__stage-wrapp {
+	width: calc(100% - 40px);
+
+
+
+	@media($mobile) {
+		width: 100%;
+		overflow: auto;
+
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+
+		@media (hover: hover) {
+			&:hover {
+				scrollbar-width: thin;
+
+				&::-webkit-scrollbar {
+					display: block;
+					width: 8px;
+				}
+			}
+		}
+
+
+		@media (hover: none) {
+			&:active {
+				scrollbar-width: thin;
+
+				&::-webkit-scrollbar {
+					display: block;
+					width: 8px;
+				}
+			}
+		}
+
+	}
+}
+
+.step__help:disabled {
+	cursor: none;
+	pointer-events: none;
+	filter: grayscale(100);
 }

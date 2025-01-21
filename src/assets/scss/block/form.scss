@@ -389,6 +389,7 @@ input:checked~.form__list-input-span {
 	padding-right: 25px;
 	position: relative;
 	z-index: 1;
+	align-items: flex-start;
 
 	@media($tablet) {
 		grid-template-columns: 100%;
@@ -400,7 +401,7 @@ input:checked~.form__list-input-span {
 	@media($mobile) {
 		padding-right: 0;
 		margin-top: 22px;
-		gap: 15px;
+		gap: 20px;
 	}
 }
 
@@ -408,7 +409,7 @@ input:checked~.form__list-input-span {
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 30px;
+	margin-top: 35px;
 	position: relative;
 	z-index: 1;
 
@@ -432,11 +433,16 @@ input:checked~.form__list-input-span {
 
 .form__input-wrapp {
 	position: relative;
+	display: block;
 
 	.just-validate-error-label {
 		position: absolute;
 		left: 15px;
 		bottom: -20px;
+
+		@media($mobile) {
+			bottom: -15px;
+		}
 	}
 }
 
@@ -525,6 +531,17 @@ input:checked~.form__list-input-span {
 		margin-left: auto;
 		margin-right: auto;
 		width: 100%;
+	}
+
+}
+
+.form__input-list-inner+.form__input-list-inner {
+	margin-top: 24px;
+}
+
+.result-form {
+	@media($mobile) {
+		margin-top: 55px;
 	}
 
 }

@@ -1,4 +1,4 @@
-<form id="#form-access" class="form">
+<form id="#form-access" class="form result-form">
 	<input id="age" name="age" class="access__hidden-input" type="hidden">
 	<input id="weight" name="weight" class="access__hidden-input" type="hidden">
 	<input id="desired-weight" name="desired-weight" class="access__hidden-input" type="hidden">
@@ -48,9 +48,15 @@
 				</div>
 
 				<div class="form__input-row">
-					<label class="form__input-wrapp">
-						<input id="email" class="form-input" type="email" required placeholder="Введите Ваш e-mail">
-					</label><button class="btn from-btn" type="submit">Получить доступ</button>
+					<ul class="form__input-list">
+						<li class="form__input-list-inner">
+							<label class="form__input-wrapp">
+								<input id="email" class="form-input" type="email" required
+									placeholder="Введите Ваш e-mail">
+							</label>
+						</li>
+					</ul>
+					<button class="btn from-btn" type="submit">Получить доступ</button>
 				</div>
 
 				<ul class="form__list">

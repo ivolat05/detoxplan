@@ -204,18 +204,11 @@ if (trigerDreams && dreamsBoxAnimates) {
 			start: "top 90%",
 		},
 	});
-	dreamsBoxAnimates.forEach((btn, index) => {
+	dreamsBoxAnimates.forEach((btn) => {
 		dreamsAnimategroup.fromTo(
 			btn,
-			{
-				x: index % 2 ? "100%" : "-100%",
-				opacity: 0,
-			},
-			{
-				x: "0",
-				opacity: 1,
-				duration: 0.8,
-			}
+			{ opacity: 0 },
+			{ opacity: 1, duration: 0.8 }
 		);
 	});
 }
@@ -270,3 +263,66 @@ if (trigerQuestions && questionsBoxAnimates) {
 		);
 	});
 }
+
+// step animate
+const listStep = document.querySelectorAll(".step__list-inner");
+listStep.forEach((listInner) => {
+	const circle = listInner.querySelector(".step__circle");
+	const text = listInner.querySelector(".step__circle-text");
+	if (!circle) return;
+	const progressElement = circle.querySelector(".step__circle-progress");
+	const startProgress =
+		parseFloat(
+			getComputedStyle(circle).getPropertyValue("--start-progress")
+		) || 0;
+	const progress =
+		parseFloat(getComputedStyle(circle).getPropertyValue("--progress")) ||
+		100;
+	const startNumber =
+		parseFloat(getComputedStyle(text).getPropertyValue("--start-number")) ||
+		0;
+	const finishNumber =
+		parseFloat(
+			getComputedStyle(text).getPropertyValue("--finish-number")
+		) || 100;
+	const circumference = 440;
+	const startOffset = circumference - (circumference * startProgress) / 100;
+	const endOffset = circumference - (circumference * progress) / 100;
+
+	const observer = new MutationObserver((mutationsList) => {
+		mutationsList.forEach((mutation) => {
+			if (
+				mutation.type === "attributes" &&
+				mutation.attributeName === "class" &&
+				listInner.classList.contains("active")
+			) {
+				gsap.set(progressElement, {
+					strokeDashoffset: startOffset,
+				});
+
+				gsap.to(progressElement, {
+					strokeDashoffset: endOffset,
+					duration: 0.4, // Длительность анимации
+					ease: "power1.out",
+				});
+
+				let animatedValue = { value: startNumber };
+				gsap.to(animatedValue, {
+					value: finishNumber,
+					duration: 0.4,
+					ease: "power1.out",
+					onUpdate: function () {
+						text.textContent = `${Math.round(
+							animatedValue.value
+						)}%`;
+					},
+				});
+				// Остановить наблюдатель после срабатывания
+				observer.disconnect();
+			}
+		});
+	});
+
+	// Начинаем наблюдение за изменением атрибутов
+	observer.observe(listInner, { attributes: true });
+});
